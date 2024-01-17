@@ -1,0 +1,11 @@
+<% include ./partials/header.ejs %>
+<div class="cards w-full h-screen mt-[5%] ml-[5%] flex flex-wrap gap-3">
+<% user.postdata.forEach(function(i){ %>
+    <div class="text-center text-[10px] font-semibold ">
+        <div class="bg-slate-100 w-[110px] h-[80px]  rounded-lg overflow-hidden">
+            <img src="/images/upload/<%=i.image%>">
+        </div>
+        </div>
+<% })%>
+</div>
+<% include ./partials/footer.ejs %>

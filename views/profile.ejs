@@ -1,0 +1,41 @@
+<% include ./partials/header.ejs %>
+
+    <form  id="upload" hidden action="/fileupload" method="post" enctype="multipart/form-data">
+        <input type="file" name="image">
+    </form>
+    <div class="profiledts flex flex-col items-center ">
+        <div class="relative mt-[2%]">
+            <span id="pen"class="absolute top-20 left-20"><i class="ri-pencil-fill"></i></span>
+        <div class="dp w-[100px] h-[100px] rounded-full border-2  bg-slate-800 overflow-hidden">
+          <img src="/images/upload/<%=user.profileImage%>">
+        </div>
+        </div>
+    <div>
+        <div class="username text-[30px] mt-[3%]">Jyoti Khetwal</div>
+        <div class="ml-10">jyotikhetwal29</div>
+        <div class="flex gap-5 mt-[3%]">
+            <button class="w-[80px] h-[45px] rounded-[15%] border-2 bg-slate-800 font-semibold">Share</button>
+            <a href="/add" class="w-[90px] h-[45px] border-2 text-center rounded-[10%] pt-[5%] bg-slate-800 font-semibold">Add Post</a>
+        </div>
+    </div>
+    <div class="cards w-full flex flex-wrap gap-3 ml-[2%] mt-[3%]">
+        <div class="text-center text-[10px] font-semibold">
+        <div class="bg-slate-100 w-[110px] h-[80px] rounded-lg overflow-hidden">
+            <img src="/images/upload/bef9ccb2-4f44-40f5-b033-6ff13b9ed132.jpg" alt="https://in.pinterest.com/pin/985231162872191/">
+        </div>
+        <a href="/all"><%=user.postdata.length %> posts</a>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.querySelector("#pen").addEventListener("click",function(){
+        document.querySelector("#upload input").click();
+    })
+    document.querySelector("#upload input").addEventListener("change",function(){
+        document.querySelector("#upload").submit();
+    })
+
+</script>
+<% include ./partials/footer.ejs %>

@@ -1,0 +1,29 @@
+<% include ./partials/header.ejs %>
+<div class="w-full h-screen  bg-slate-500 flex items-center justify-center ">
+  <div class=" realtive h-[90%] w-[484px] bg-slate-100 rounded-[6%] mb-[5%]">
+      <h1 class="text-center text-[32px] font-[600] mt-[5%]" >Welcome to Pinterest</h1>
+      <form class=" absolute ml-[7%]"  action="/login" method="post">
+        <div class="mt-[2%]">
+          <label class="" for="name" >Name</label>
+          <fieldset><input name="username" class=" p-[3%] h-[45px] w-[300px] rounded-lg border-2 border-slate-400" type="text" placeholder="User Name"></fieldset>
+        </div>
+        <div class="mt-[2%]">
+          <label class="" for="email">Email</label>
+          <fieldset><input  class=" p-[3%] h-[45px] w-[300px] rounded-lg border-2 border-slate-400" type="email" placeholder="Email" name="useremail"></fieldset>
+        </div>
+        <div class="mt-[2%]">
+          <label class="" for="Password">Password</label>
+          <fieldset><input  class=" p-[3%] h-[45px] w-[300px] rounded-lg border-2 border-slate-400" type="password" placeholder="Password" name="password"></fieldset>
+          <h3>Forgot your password?</h3>
+        </div>
+        <div class="bg-[#e60023]  border rounded-full w-[300px] h-[40px] mt-[2%] text-center pt-[2%]">
+          <button >Log in</button>
+        </div>
+      </form>
+      <div class="absolute bottom-12 text-center w-[300px] ml-[7%] ">
+     <p class="">By continuing, you agree to Pinterest's Terms of Service; Opens a new tab and acknowledge you've read our Privacy Policy.    </p>
+    </div>
+    <a class="absolute bottom-5 text-center w-[450px] font-[600]" href="/signup">Don't have any account?</a>
+    </div>
+</div>
+<% include ./partials/footer.ejs %>

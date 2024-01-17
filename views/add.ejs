@@ -1,0 +1,21 @@
+<% include ./partials/header.ejs %>
+<div class="w-full h-[90%] bg-slate-500 flex flex-col items-center mt-[10px] ">
+      <div class="mt-[15px]">
+         <p class="text-[50px] italic ">CREATE A POST</p>
+         <div class="flex flex-col items-center border-4 p-[4%] gap-[5px] rounded-[5%]">
+        <form id="post" action="/newpost" method="post"enctype="multipart/form-data">
+            <input type="file" name="post">
+            <div>
+            <p>Title Of Post</p>
+             <input type="text" name="title" placeholder="Title" class="w-[300px] h-[50px] text-[20px] border-2 text-center">
+            </div> 
+            <div>
+                <p>Description</p>  
+               <textarea name="desc" rows="5" cols="36"  class=" p-[1%] border-2 "></textarea>
+              </div> 
+            <button type="submit" class="border-2 bg-red-500 w-[90%] ml-[15px] border-red-500">POST</button>  
+        </form>
+        </div>
+      </div>
+</div>
+<% include ./partials/footer.ejs %>
